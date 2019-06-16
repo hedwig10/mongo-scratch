@@ -1,0 +1,26 @@
+{{#each article}}
+<div class"container">
+    {{#if isSaved}}
+    <div class"row">
+        <div class+"col-sm-10">
+            <a href={{this.url}}>
+
+                <h3>{{this.headline}}</h3>
+            </a>
+            <p>{{this.summary}}</p>
+        </div>
+        <div class+"col-sm-2">
+            <button>Delete</button>
+        </div>
+    </div>
+    {{/if}}
+</div>
+{{/each}}
+
+{{#if empty}}
+<div class"container">
+    <p class="text-center">
+        No info, please scrape some and render here.
+    </p>
+</div>
+{{/if}}
